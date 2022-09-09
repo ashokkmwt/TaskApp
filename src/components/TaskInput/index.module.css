@@ -1,0 +1,123 @@
+.parent {
+    width: 100%;
+    height: 100vh;
+}
+
+main {
+    width: 100%;
+    height: 70vh;
+    background-color: rgb(73, 51, 239);
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    /* scrollbar-width: none; */
+    position: relative;
+}
+::-webkit-scrollbar {
+    width: 0px;
+  }
+
+.backText{
+    width: 100%;
+    height: 70vh;
+    padding: 20px;
+    position: fixed;
+}
+
+.backText h3{
+    color: rgba(193, 185, 185, 0.5);
+    font-size: 15rem;
+}
+
+footer {
+    width: 100%;
+    height: 30vh;
+    background-color: rgb(4, 4, 187);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 15px;
+}
+
+footer button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 3rem;
+    color: rgb(10, 154, 232);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer button:hover {
+    color: blue;
+}
+
+.popup {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(127, 127, 247, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    background-color: #1c4099;
+    border-radius: 10px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    position: relative;
+}
+
+.box h3 {
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.box h3:hover {
+    color: black;
+}
+
+textarea {
+    width: 80%;
+    height: 70%;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: blue;
+    padding: 12px;
+}
+
+.addBtn {
+    width: 50px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.addBtn:hover {
+    font-size: 1rem;
+}
