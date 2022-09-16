@@ -27,7 +27,7 @@ export default function AddedTask(props) {
 
     return (
         <div className={styles.taskContainer}>
-            <textarea onChange={handlerTextarea} readOnly={readonly} value={newTask} />
+            <input onChange={handlerTextarea} readOnly={readonly} value={newTask} />
             <div className={styles.buttonBar}>
                 <button onClick={updateTask}>{readonly ? "Edit" : "Save"}</button>
                 <button onClick={removeTask}>Delete</button>
