@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { add_Task } from '../../redux/actions/TaskActions';
+import generateId from '../../utils/helper';
 import AddedTask from '../AddedTask';
 import styles from './index.module.css'
 
@@ -15,18 +16,19 @@ export default function TaskInput() {
 
   const handleTask = (e) => setTask(e.target.value);
 
-  const generateId = () => Math.ceil(Math.random() * 1000000)
-
   const getTask = useSelector(state => state.taskReducer)
 
   const dispatch = useDispatch();
 
   const addTask = () => {
+
+    const id = generateId();
+
     if (task === "") {
       alert("please type something")
       return
     }
-    const id = generateId();
+
     const data = {
       task: task,
       id: id
@@ -40,9 +42,9 @@ export default function TaskInput() {
     <>
       <div className={styles.parent}>
         <main>
-          {getTask.map((todo, index) => {
+          {getTask.map((todo) => {
             return (
-              <AddedTask key={index} todo={todo} />
+              <AddedTask key={todo.id} todo={todo} />
             )
           })}
         </main>
